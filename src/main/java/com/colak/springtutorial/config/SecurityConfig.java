@@ -36,7 +36,6 @@ public class SecurityConfig {
         return http.build();
     }
 
-    // Optional: Configure the authentication manager if you need to use it elsewhere
     @Bean
     public AuthenticationManager authenticationManagerBean() {
         return authentication -> customAuthenticationProvider.authenticate(authentication);
